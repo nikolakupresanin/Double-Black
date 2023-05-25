@@ -1,0 +1,113 @@
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+/*Default Animation*/
+@keyframes defaultAnimation {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+/*End Default Animation*/
+
+/*Navbar*/
+.navbar{
+    background-color: #000 !important;
+    height: 110vh;
+    animation-name: example;
+    animation-duration: 3s;
+    .navbar-brand{
+        animation-name: defaultAnimation;
+        animation-duration: 2s;
+    }
+    .nav-link{
+        animation-name: defaultAnimation;
+        animation-duration: 2s;
+        text-transform: uppercase;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        transition-duration: 0.6s;
+        color:#fed875 !important;
+        &:hover{
+            color:#fff !important;
+        }
+    }
+    .nav-item.active{
+        border-left:2px solid #fff;
+        animation-name: defaultAnimation;
+        animation-duration: 2s;
+       .nav-link{
+        color: #fff !important;
+       }
+    }
+}
+/*End Navbar*/
+
+/*Contact*/
+.left-card{
+    background-color: black;
+    color: #fff;
+    a{
+        text-decoration: none;
+        color: #fed875;
+        transition-duration: 0.6s;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+/*End Contact*/
+
+/*Footer*/
+#footer{
+    background-color: #000;
+    .img-footer{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 30%;
+            padding-top: 20px;
+        }
+    }
+    .social-footer, .contact-footer{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        a{
+            padding-top: 10px;
+            color: #fed875;
+            text-decoration: none;
+            transition-duration: 0.6s;
+            &:hover{
+                color:#fff;
+            }
+            svg{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+/*End Footer*/
+
+ /*Fixed Icon*/
+ .fixed-icon{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5vh;
+    right: 5px;
+    animation-name: defaultAnimation;
+    animation-duration: 2s;
+    img{
+        transition-duration: 0.6s;
+        width: 35px;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+  }
+  /*End Fixed Icon*/

@@ -1,0 +1,233 @@
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    font-family: 'League Spartan', sans-serif;
+}
+/*Default Animation*/
+@keyframes defaultAnimation {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+/*End Default Animation*/
+
+/*Navbar*/
+.navbar{
+    background-color: #000 !important;
+    height: 110vh;
+    animation-name: example;
+    animation-duration: 3s;
+    .navbar-brand{
+        animation-name: defaultAnimation;
+        animation-duration: 2s;
+    }
+    .nav-link{
+        animation-name: defaultAnimation;
+        animation-duration: 2s;
+        text-transform: uppercase;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        transition-duration: 0.6s;
+        color:#fed875 !important;
+        &:hover{
+            color:#fff !important;
+        }
+    }
+    .nav-item.active{
+        border-left:2px solid #fff;
+        animation-name: defaultAnimation;
+        animation-duration: 2s;
+       .nav-link{
+        color: #fff !important;
+       }
+    }
+}
+/*End Navbar*/
+
+/*Slider*/
+.carousel-item{
+    height: 450px;
+}
+.carousel-image-1{
+    background: url(../img/image1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.carousel-image-2{
+    background: url(../img/image2.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.carousel-image-3{
+    background: url(../img/image3.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+/*End Slider*/
+
+/*Home Heading Section*/
+#home-heading{
+    position: relative;
+    min-height: 250px;
+    background: url(../img/lights.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    .dark-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*End Home Heading Section*/
+
+/*Info Section*/
+#info{
+    .left-section{
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+    }
+}
+/*End Info Section*/
+
+/*Testimonials*/
+.testimonials{
+    margin: 50px auto;
+    h3{
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    .row{
+        margin-top: 30px;
+        .col-md-4{
+            margin: 40px auto;
+            .profile{
+                padding: 70px 5px 5px;
+                background-color: #efefef;
+                transition-duration: 0.5s;
+                min-height: 350px;
+                max-height: 400px;
+                &:hover{
+                    box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+                    cursor: pointer;
+                }
+                h3{
+                    font-size: 20px;
+                    margin-top: 15px;
+                    color: #ff9800;
+                }
+                span{
+                    font-size: 12px;
+                    color: #333;
+                    padding-left: 5px;
+                }
+                blockquote{
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+                blockquote::before{
+                    content:'"';
+                    font-size:30px;
+                    position: relative;
+                    color:#ff9800;
+                    line-height: 20px;
+                    bottom: 15px;
+                    right: 0pc;
+                }
+                blockquote::after{
+                    content:'"';
+                    font-size:30px;
+                    position: relative;
+                    color:#ff9800;
+                    line-height: 20px;
+                    bottom: 0px;
+                    left: 0pc;
+                } 
+            }
+        }
+    }
+}
+/*End Testimonials*/
+
+/*Footer*/
+#footer{
+    background-color: #000;
+    .img-footer{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 30%;
+            padding-top: 20px;
+        }
+    }
+    .social-footer, .contact-footer{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        a{
+            padding-top: 10px;
+            color: #fed875;
+            text-decoration: none;
+            transition-duration: 0.6s;
+            &:hover{
+                color:#fff;
+            }
+            svg{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+/*End Footer*/
+
+/*Back To Top Button*/
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color:#000;
+    border-color: #000;
+    color: #fed875;
+    transition-duration: 0.6s;
+    &:hover{
+        background-color: #fed875;
+        color: #000;
+        border-color: #fed875;
+    }
+  }
+  /*End Back To Top Button*/
+
+  /*Fixed Icon*/
+  .fixed-icon{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5vh;
+    right: 5px;
+    animation-name: defaultAnimation;
+    animation-duration: 2s;
+    img{
+        transition-duration: 0.6s;
+        width: 35px;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+  }
+  /*End Fixed Icon*/
